@@ -1,4 +1,4 @@
-# Pet Store API
+# Waardepapieren API
 
 [![Automated Testing](https://github.com/CommonGateway/WaardepapierenAPI/actions/workflows/tests.yml/badge.svg)](https://github.com/CommonGateway/WaardepapierenAPI/actions/workflows/tests.yml)
 
