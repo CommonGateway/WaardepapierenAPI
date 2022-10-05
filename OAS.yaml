@@ -167,11 +167,9 @@ components:
         discipl:
           type: string
           description: The discipl of this certificate as an json object
-          readOnly: true
         irma:
           type: string
           description: The claim of this certificate as an json object
-          readOnly: true
         claimData:
           type: object
           description: The data of the claim this certificate as an json object
@@ -183,11 +181,9 @@ components:
         jwt:
           type: string
           description: The claim of this certificate as a jwt token.
-          readOnly: true
         image:
           type: string
           description: The image of this certificate. This is a qr-code.
-          readOnly: true
         w3c:
           type: object
           description: w3c version of the claim
@@ -221,4 +217,3 @@ components:
         document:
           type: string
           description: The document of this ceritificate. This is a pdf.
-          readOnly: true
