@@ -19,11 +19,11 @@ paths:
       tags: []
       responses:
         '200':
-          description: User Found
+          description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/User'
+                $ref: '#/components/schemas/Certificate'
               examples:
                 Get User Alice Smith:
                   value:
@@ -34,8 +34,6 @@ paths:
                     dateOfBirth: '1997-10-31'
                     emailVerified: true
                     signUpDate: '2019-08-24'
-        '404':
-          description: User Not Found
         '':
           content:
             application/json:
