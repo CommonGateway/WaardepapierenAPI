@@ -215,7 +215,7 @@ components:
             credentialSubject:
               type: object
               properties:
-                '':
+                id:
                   type: string
           readOnly: true
         imageLocation:
