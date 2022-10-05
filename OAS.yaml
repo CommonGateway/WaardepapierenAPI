@@ -23,7 +23,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Certificate'
+                $ref: '#/components/schemas/User'
               examples:
                 Get User Alice Smith:
                   value:
@@ -147,8 +147,24 @@ components:
           type: string
           description: The organization that is requested to "sign" this claim
         claim:
-          type: string
+          type: object
           description: The claim of this certificate as an json object
+          properties:
+            iss:
+              type: string
+            user_id:
+              type: string
+            user_representation:
+              type: string
+            claim_data:
+              type: object
+              properties:
+                persoon:
+                  type: string
+                doel:
+                  type: string
+            iat:
+              type: string
           readOnly: true
         discipl:
           type: string
@@ -159,8 +175,13 @@ components:
           description: The claim of this certificate as an json object
           readOnly: true
         claimData:
-          type: string
+          type: object
           description: The data of the claim this certificate as an json object
+          properties:
+            persoon:
+              type: string
+            doel:
+              type: string
         jwt:
           type: string
           description: The claim of this certificate as a jwt token.
@@ -170,8 +191,32 @@ components:
           description: The image of this certificate. This is a qr-code.
           readOnly: true
         w3c:
-          type: string
+          type: object
           description: w3c version of the claim
+          properties:
+            '@context':
+              type: array
+              items:
+                type: string
+            type:
+              type: array
+              items: {}
+            issuer:
+              type: string
+            inssuanceDate:
+              type: string
+            proof:
+              type: object
+              properties:
+                proofPurpose:
+                  type: string
+                type:
+                  type: string
+            credentialSubject:
+              type: object
+              properties:
+                '':
+                  type: string
           readOnly: true
         imageLocation:
           type: string
